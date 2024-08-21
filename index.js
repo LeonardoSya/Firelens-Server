@@ -1,7 +1,10 @@
 const express = require('express')
 const cors = require('cors')
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const GeoData = require('./models/geoData')
+require('dotenv').config()
+
+const mongoURI = process.env.MONGO_URI
 
 const app = express()
 const port = 3001
@@ -11,7 +14,7 @@ app.use(cors())
 app.use(express.json())
 
 // 连接mongodb
-mongoose.connect('mongodb://localhost:27017/firelens')
+mongoose.connect(mongoURI)
 // 检查数据库连接
 mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB!')
