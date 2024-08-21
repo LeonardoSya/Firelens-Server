@@ -20,7 +20,7 @@ This is a Node.js API server created by [LeonardoSya](https://github.com/Leonard
 ### Installation
 ```bash
 git clone https://github.com/LeonardoSya/firelens-server.git
-cd firelens-server
+cd Firelens-Server
 npm install
 npm start
 ```
