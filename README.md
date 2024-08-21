@@ -1,6 +1,6 @@
 ﻿# Firelens Server
 
-This is a Node.js API server created by [LeonardoSya](https://github.com/LeonardoSya) and designed to provide data to Firelens System. The server fetches and processes fire data, offering it through API endpoints.
+This is a Node.js API server created by [LeonardoSya](https://github.com/LeonardoSya) and designed to provide data to (Firelens System)[https://github.com/LeonardoSya/Firelens-System]. The server fetches and processes fire data, offering it through API endpoints.
 
 ## Features
 
