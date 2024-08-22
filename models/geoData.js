@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 // 创建Mongoose模型来匹配GeoJSON数据结构
-const geoDataSchema = new Schema({
+const geoDataSchema = new Schema([{
   type: {
     type: String,
     emun: ['FeatureCollection'],
@@ -41,7 +41,7 @@ const geoDataSchema = new Schema({
       }
     }
   ]
-})
+}])
 
 const GeoData = mongoose.model('GeoData', geoDataSchema, 'feature-collection')
 

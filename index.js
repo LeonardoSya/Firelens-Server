@@ -24,17 +24,10 @@ mongoose.connection.on('connected', () => {
 // 路由
 app.get('/api/mapdata', async (req, res) => {
   try {
-    const { date, day, night } = req.query
+    const { date } = req.query
     let filter = {}
 
     filter.date = date
-
-    if (day && night) {
-    } else if (day) {
-      filter['features.properties.DayNight'] = 100
-    } else if (night) {
-      filter['features.properties.DayNight'] = 0
-    }
 
     const geoData = await GeoData.find(filter)
     res.json(geoData)
