@@ -16,19 +16,19 @@ const geoDataSchema = new Schema({
         required: true
       },
       geometry: {
-        geodestic: Boolean,
+        geodesic: Boolean,
         type: {
           type: String,
           enum: ['Point', 'LineString', 'Polygon'],
           required: true
         },
         coordinates: {
-          type: [Number],
+          type: [[Number]],
           required: true
         }
       },
       id: String,
-      porperties: {
+      properties: {
         Bright_ti5: Number,
         DayNight: Number,
         confidence: Number,
