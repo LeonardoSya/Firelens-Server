@@ -1,0 +1,6 @@
+{
+  "cursor.composer.showSuggestedFiles": true,
+  "editor.quickSuggestions": {
+    "comments": "on"
+  }
+}
