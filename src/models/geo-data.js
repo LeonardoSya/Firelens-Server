@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const geoDataSchema = new mongoose.Schema({
   latitude: {
@@ -59,4 +59,4 @@ geoDataSchema.index({ latitude: 1, longitude: 1 });
 
 const GeoData = mongoose.model("GeoData", geoDataSchema, "global-48h-data");
 
-module.exports = GeoData;
+export default GeoData;
