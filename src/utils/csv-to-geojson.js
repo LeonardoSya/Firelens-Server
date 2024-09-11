@@ -10,8 +10,8 @@ const __dirname = dirname(__filename);
 function convertCsvToGeojson(inputFileName, outputFileNamePrefix) {
   const today = new Date().toISOString().slice(0, 10).replace(/-/g, "");
   const outputFileName = `${outputFileNamePrefix}_${today}.geojson`;
-  const csvDir = path.join(__dirname, "..", "..", "data", "csv");
-  const geojsonDir = path.join(__dirname, "..", "..", "data", "geojson");
+  const csvDir = path.join(__dirname, "..", "data", "csv");
+  const geojsonDir = path.join(__dirname, "..", "data", "geojson");
   const inputFilePath = path.join(csvDir, inputFileName);
   const outputFilePath = path.join(geojsonDir, outputFileName);
 
