@@ -45,8 +45,8 @@ router.get("/global-48h-data", async (req, res) => {
     }
     if (startDate || endDate) {
       query.acq_date = {};
-      if (startDate) query.acq_date.$gte = new Date(startDate);
-      if (endDate) query.acq_date.$lte = new Date(endDate);
+      if (startDate) query.acq_date.$gte = startDate;
+      if (endDate) query.acq_date.$lte = endDate;
     }
     if (daynight) query.daynight = daynight;
 
