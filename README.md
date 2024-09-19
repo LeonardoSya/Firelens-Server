@@ -13,7 +13,7 @@ This is a Node.js API server created by [LeonardoSya](https://github.com/Leonard
 
 ### Prerequisites
 
-- Node.js (>=14.x)
+- Node.js (>=20.x)
 - npm (>=6.x)
 - MongoDB (>=4.x)
 
