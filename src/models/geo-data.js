@@ -53,6 +53,10 @@ const geoDataSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ndvi: {
+    type: Number,
+    required: true,
+  },
 });
 
 geoDataSchema.index({ latitude: 1, longitude: 1 });

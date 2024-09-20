@@ -1,3 +1,4 @@
 node_modules
 .env
 geojson/
+ndvi_tif/

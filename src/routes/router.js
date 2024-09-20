@@ -20,6 +20,7 @@ router.get("/global-48h-data", async (req, res) => {
       startDate,
       endDate,
       daynight,
+      ndvi,
     } = req.query;
 
     let query = {
@@ -49,6 +50,7 @@ router.get("/global-48h-data", async (req, res) => {
       if (endDate) query.acq_date.$lte = endDate;
     }
     if (daynight) query.daynight = daynight;
+    if (ndvi) query.ndvi = { $gt: 2000 };
 
     console.log("查询条件:", JSON.stringify(query, null, 2));
 
@@ -74,6 +76,7 @@ router.get("/global-48h-data", async (req, res) => {
         bright_ti5: feature.bright_ti5,
         frp: feature.frp,
         daynight: feature.daynight,
+        ndvi: feature.ndvi,
       },
     }));
 

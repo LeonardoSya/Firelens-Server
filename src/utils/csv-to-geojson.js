@@ -22,7 +22,6 @@ function convertCsvToGeojson(inputFileName, outputFileNamePrefix) {
     );
 
     if (isOutdated) {
-      console.log("检测到现有GeoJSON文件不是今天的日期,清空文件夹...");
       existingGeojsonFiles.forEach((file) => {
         fs.unlinkSync(path.join(geojsonDir, file));
         console.log(`已删除GeoJSON文件: ${file}`);
@@ -70,6 +69,7 @@ function convertCsvToGeojson(inputFileName, outputFileNamePrefix) {
               bright_ti5: parseFloat(row.bright_ti5),
               frp: parseFloat(row.frp),
               daynight: row.daynight,
+              ndvi: parseFloat(row.ndvi),
             },
           })),
         };
