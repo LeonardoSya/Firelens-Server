@@ -11,7 +11,7 @@ import checkAndUpdateData from "./services/check-update.js";
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const csvFileName = "J2_VIIRS_C2_Global_48h.csv";
 const ndviCsvFileName = "J2_VIIRS_C2_Global_48h.csv";
 const geoJsonFileNamePrefix = "J2_VIIRS_C2_Global_48h";
