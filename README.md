@@ -10,7 +10,7 @@ This is a Node.js API server created by [LeonardoSya](https://github.com/Leonard
 - Node.js (>=20.x)
 - npm (>=6.x)
 - MongoDB (>=4.x)
-[MongoDB](https://www.mongodb.com/try/download/database-tools) Install it in the original Mongo file path
+[MongoDB-database-tools](https://www.mongodb.com/try/download/database-tools) Install it in the original Mongo file path
 
 ### Installation
 ```bash
