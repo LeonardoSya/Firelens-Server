@@ -11,7 +11,8 @@ const checkAndUpdateData = async (
   csvUrl,
   csvPath,
   ndviCsvPath,
-  tifPath
+  tifPath,
+  port
 ) => {
   try {
     const stats = await promisify(fs.stat)(geoJsonPath).catch(() => null);
@@ -42,13 +43,13 @@ const checkAndUpdateData = async (
             resolve();
           });
         });
-        console.log("\n>>> Firelens Server Successfully Started >>>\n");
+        console.log(`\n>>> Firelens Server Successfully Started on port ${port} >>>\n`);
       } catch (error) {
         console.error("数据处理过程中出错:", error);
       }
     } else {
       console.log("热点数据无需更新");
-      console.log("\n>>> Firelens Server Successfully Started >>>\n");
+      console.log(`\n>>> Firelens Server Successfully Started on port ${port} >>>\n`);
     }
   } catch (error) {
     console.error("检查或更新文件时出错:", error);
