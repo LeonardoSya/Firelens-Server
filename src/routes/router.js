@@ -91,4 +91,30 @@ router.get("/global-48h-data", async (req, res) => {
   }
 });
 
+router.get("/plot-get-time", async (req, res) => {
+  try {
+    const data = await GeoData.find(
+      { ndvi: { $gt: 9500 } },
+      "acq_date acq_time bright_ti4"
+    ).lean();
+
+    const formattedData = data.map((item) => {
+      const date = new Date(item.acq_date);
+      const hours = Math.floor(item.acq_time / 100);
+      const minutes = item.acq_time % 100;
+      date.setUTCHours(hours, minutes);
+
+      return {
+        datetime: date.toISOString(),
+        bright: item.bright_ti4,
+      };
+    });
+
+    formattedData.sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+    res.json(formattedData);
+  } catch (error) {
+    res.status(500).json({ message: "获取数据时出错", error: error.message });
+  }
+});
+
 export default router;
